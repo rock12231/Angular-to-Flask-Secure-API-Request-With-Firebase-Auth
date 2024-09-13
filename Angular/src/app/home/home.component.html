@@ -1,0 +1,11 @@
+<!-- src/app/home/home.component.html -->
+
+<div *ngIf="user; else loginTemplate">
+    <h3>Welcome, {{ user.displayName }}!</h3>
+    <button (click)="sendDataToApi()">Send Data to Flask API</button>
+  </div>
+  
+  <ng-template #loginTemplate>
+    <button (click)="login()">Login with Google</button>
+  </ng-template>
+  
